@@ -53,10 +53,10 @@ Edit `~/.claude/hooks/peon-ping/config.json`:
 
 ## Sound packs
 
-| Pack | Character | Sounds |
-|---|---|---|
-| `peon` (default) | Orc Peon (Warcraft III) | "Ready to work?", "Work, work.", "Okie dokie." |
-| `ra2_soviet_engineer` | Soviet Engineer (Red Alert 2) | "Tools ready", "Yes, commander", "Engineering" |
+| Pack | Character | Sounds | By |
+|---|---|---|---|
+| `peon` (default) | Orc Peon (Warcraft III) | "Ready to work?", "Work, work.", "Okie dokie." | [@tonyyont](https://github.com/tonyyont) |
+| `ra2_soviet_engineer` | Soviet Engineer (Red Alert 2) | "Tools ready", "Yes, commander", "Engineering" | [@msukkari](https://github.com/msukkari) |
 
 Switch packs in `~/.claude/hooks/peon-ping/config.json`:
 
