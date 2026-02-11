@@ -30,6 +30,14 @@ teardown() {
   [[ "$sound" == *"/packs/peon/sounds/Perm"* ]]
 }
 
+@test "PermissionRequest plays a permission sound (IDE support)" {
+  run_peon '{"hook_event_name":"PermissionRequest","tool_name":"Bash","tool_input":{"command":"rm -rf /"},"cwd":"/tmp/myproject","session_id":"s1","permission_mode":"default"}'
+  [ "$PEON_EXIT" -eq 0 ]
+  afplay_was_called
+  sound=$(afplay_sound)
+  [[ "$sound" == *"/packs/peon/sounds/Perm"* ]]
+}
+
 @test "Notification idle_prompt does NOT play sound (Stop handles it)" {
   run_peon '{"hook_event_name":"Notification","notification_type":"idle_prompt","cwd":"/tmp/myproject","session_id":"s1","permission_mode":"default"}'
   [ "$PEON_EXIT" -eq 0 ]
