@@ -23,6 +23,7 @@
     "complete": {
       "sounds": [
         { "file": "AcolyteBuildingComplete1.wav", "line": "Постройка завершена." },
+        { "file": "NecromancerResearchComplete1.wav", "line": "Исследование завершено." },
         { "file": "AcolyteReady1.wav", "line": "Дела не ждут." },
         { "file": "AcolyteYes1.wav", "line": "Раз ты так хочешь." },
         { "file": "AcolyteYes2.wav", "line": "Да, хозяин." },
