@@ -1,3 +1,10 @@
+## v2.17.1 (2026-03-29)
+
+### Fixed
+- **Hook stderr leak on /dev/tty** — wrapped all tty write sites in brace groups so bash's own redirect-open failure is suppressed by `2>/dev/null`. Previously, Claude Code (and any tool that inspects hook stderr) would see a spurious error on every session start when `/dev/tty` is unavailable (WSL2, headless). Fixes #407.
+- **Spurious update notice** — added same-version guard on update notice display; stale `.update_available` files from previous installs are cleaned up silently instead of showing "2.17.0 → 2.17.0".
+- **Themed overlay position** — glass, jarvis, and sakura themed overlays now respect `notification_position` config (was always defaulting to top-right). Brought to parity with default `mac-overlay.js`. Fixed by #413.
+
 ## v2.17.0 (2026-03-26)
 
 ### Added
